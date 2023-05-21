@@ -60,23 +60,42 @@ const firstDog = new Dog()
 // }
 
 // STEP 7
-class Animal {
-    constructor(breed) {
-        this.breed = breed
-    }
-    speak = () => {
-        if (this.breed == 'dog') {
-            console.log(`${this.breed} has barked!`)
-        } else {
-            console.log(`${this.breed} has meowed!`)
-        }
-    }
-}
-const firstAnimal = new Animal('cat')
-firstAnimal.speak()
+// class Animal {
+//     constructor(breed) {
+//         this.breed = breed
+//     }
+//     speak = () => {
+//         if (this.breed == 'dog') {
+//             console.log(`${this.breed} has barked!`)
+//         } else {
+//             console.log(`${this.breed} has meowed!`)
+//         }
+//     }
+// }
+// const firstAnimal = new Animal('cat')
+// firstAnimal.speak()
 
-// STEP 8
-
-
+// // STEP 8
+// function Animal (breed) {
+//     let _breed = breed
+//     let checkType = function () {
+//         if (_breed == 'dog') {
+//             console.log(`${_breed} has barked!`)
+//         } else {
+//             console.log(`${_breed} has meowed!`)
+//         }
+//     }
+//     this.speak = function () {
+//         checkType()
+//     }
+// }
+// const firstAnimal = new Animal('dog')
+// firstAnimal.speak()
 
 // STEP 9
+function findWords () {
+    let text = 'the quick brown fox jumps over the lazy dog the'
+    let numOfWords = text.match(/the/g)
+    console.log(`${numOfWords.length}`)
+}
+findWords()

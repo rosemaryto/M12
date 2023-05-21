@@ -49,3 +49,41 @@ album2.play()
 album3.play()
 
 console.log(`Your favorite album is: ${jbox.favoriteAlbum()}`)
+
+//////////////////
+
+
+//bind to select
+let select = document.getElementById('arrAlbums')
+let albums = ['Operation Ivy','Blink 182','New Found Glory']
+
+function bind() {
+    for (let i = 0; i < albums.length; i++) {
+        let optn = albums[i]
+        let el = document.createElement('option')
+        el.textContent = optn
+        el.value = optn
+        select.appendChild.el
+    }
+}
+bind()
+
+function played() {
+    played = 0
+    this.played += 1
+}
+
+function display() {
+    return `The album has been played ${played} times.`
+}
+
+function favoriteAlbum() {
+    let max = -1, fav
+        for (let i = 0; i < albums.length; i++) {
+            if (albums[i].played > max) {
+                max = albums[i].played
+                fav = albums[i]
+            }
+        }
+        return fav.display()
+}
